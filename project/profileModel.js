@@ -1,0 +1,41 @@
+const express=require('express');
+const mongoose=require('mongoose');
+const ProfileData=new mongoose.Schema({
+    FirstName:{
+        type:String,
+        required:true
+    },
+    LastName:{
+        type:String,
+        required:true
+    },
+    Email:{
+        type:String,
+        required:true
+    },
+    MobileNo:{
+        type:Number,
+        required:true
+    },
+    Gender:{
+        type:String,
+        required:true
+    },
+    EmployeeId:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    imagepath:{
+        type:String,
+        required:true
+    },
+    access:{
+        type:Number,
+        required:true
+    }
+});
+module.exports=mongoose.model("ProfileData",ProfileData);
