@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .services-container {
+    margin-top: 30px;
+    /* padding: 20px 100px; */
+    background-color: #f0f4ff;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-items {
+    width: 90%;
+    /* border: 2px solid black; */
+  }
+  
+  .service-info {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .service-info h2 {
+    font-size: 18px;
+    color:rgb(5, 27, 68) ;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+  }
+  
+  .service-info h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(5, 27, 68);
+  }
+  
+  .service-info p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 20px;
+  }
+  
+  .Service-items2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    gap: 60px;
+    width: 100%;
+  }
+  
+  .service-item {
+    width: 25%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid rgb(195, 195, 192);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon-div {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+  }
+  
+  .service-icon-wrapper {
+    background-color: rgb(5, 27, 68);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+  }
+  
+  .service-title {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    color: #6b7280;
+    text-align: justify;
+  }
+  
+  .button2{
+    width: 100%;
+    padding: 20px;
+    /* border: 2px solid red; */
+  }
+  
+  .estimate-button{
+    background-color: rgb(5, 27, 68);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .service-item {
+      width: 45%; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-container {
+      padding: 10px;
+    }
+  
+    .Service-items2 {
+      flex-direction: row;
+    }
+  
+    .service-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .service-info h1 {
+      font-size: 28px; 
+    }
+  
+    .service-info p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .service-title {
+      font-size: 16px;
+    }
+  
+    .service-description {
+      font-size: 14px;
+    }
+  
+    .service-icon-wrapper {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  

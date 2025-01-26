@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 320px; 
+    height: auto; 
+    background-color: rgb(5, 27, 68); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: start; 
+    flex-shrink: 0; 
+    z-index: 1;
+    padding: 20px;
+    /* border:2px solid red; */
+}
+.sidebar1{
+    width: 320px; 
+    height: auto; 
+    background-color: rgb(5, 27, 68); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0; 
+    z-index: 1;
+    display: none;
+}
+
+.mainContent {
+    width: calc(100vw - 320px);
+    height: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:428px) {
+    .sidebar{
+        display: none;
+    }
+    .sidebar1{
+        margin-top: 10px;
+        display: block;
+    }
+}
+@media (max-width:768px) {
+    .sidebar,.sidebar1{
+        width: 270px;
+    }
+}
+
+@media (max-width:768px) {
+    .mainContent{
+        width: calc(100vw - 270px);
+    }
+}
+@media (max-width: 430px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar,.sidebar1 {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .mainContent {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.busloc{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    /* border-bottom:1px solid rgb(146, 146, 146); */
+    justify-content: center;
+    align-self: center;
+    font-size: 18px;
+}
+.topbar {
+    width: 100%;
+    /* height: 60px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Center align items vertically */
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background */
+    flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+    .topbar{
+        justify-content: start;
+        align-items: start;
+        padding: 10px;
+    }
+    .name{
+        padding-bottom:10px ;
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+.name{
+    /* border:1px solid black; */
+    font-size: 28px;
+    font-weight: bold;
+    width:47%;
+}
+.topbar1 {
+    border: 1px solid #ddd; 
+    width: 100%; /* Make it responsive */
+    max-width: 600px; /* Set a max width */
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: center;
+    border-radius: 7px;
+     /* Padding for inner elements */
+}
+
+.searchicon {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Adjusted icon size */
+}
+
+.searchbar {
+    border: none;
+    width: 100%; /* Full width */
+    height: 40px; /* Adjusted height */
+    font-size: 16px;
+    transition: border 0.3s ease;
+    outline: none;
+    padding: 0 10px; /* Padding inside input */
+}
+
+.searchbutton {
+    color: black; 
+    border: none; /* No border */
+    border-radius: 20px; 
+    width: 80px; /* Button width */
+    height: 40px; /* Button height */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.searchbutton:hover {
+    background-color: #006bbd; /* Darker shade on hover */
+}
+
+.searchbar::placeholder {
+    color: #999;
+}
+
+.searchbar:focus {
+    border: 2px solid #008cff; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 140, 255, 0.3);
+}
+
+.searchbar:hover {
+    border: 1px solid #bbb; /* Light border on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0 10px; /* Reduced padding */
+    }
+
+    .topbar1 {
+        flex-direction: row; /* Maintain row layout for small screens */
+        justify-content: space-between; /* Keep spacing */
+        align-items: center; /* Center align */
+        border-radius: 7px; /* Keep rounded corners */
+        padding: 0 10px; /* Ensure padding for inner elements */
+    }
+
+    .searchbutton {
+        width: 70px; /* Slightly adjust width for small screens */
+    }
+
+    .searchbar {
+        /* width: 200px; */
+        /* border:2px solid wheat; */
+        height: 36px; /* Adjust input height for smaller screens */
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+.upper{
+    margin-top: 30px;
+    width: 100%;
+    /* height: 300px; */
+    height: auto;
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.upperleft{
+width: 500px;
+height: auto;
+/* background-color: yellow; */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 25px;
+margin-bottom: 40px;
+}
+.upperright{
+    border-radius: 10px;
+
+    width:680px;
+    /* height: 100%; */
+    /* background-color: lightcoral;   */
+    border: 1px solid #a9a9a9;
+    margin-bottom: 10px;
+}
+@media (max-width:2056px) and (min-width:1330px) {
+    .upperleft{
+        height: 300px;
+/* border:2px solid red; */
+    }
+}
+@media (max-width:1440px) {
+    .upperright{
+        width: 600px;
+    }
+}
+.ul1{
+    /* padding-top: 100px; */
+    width: 190px;
+    height: 100px;
+    border: 1px solid bisque;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* border:2px solid red; */
+    border-radius: 5%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+.ul1in{
+    width: auto;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+}
+.ul1time{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.uprheading{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    /* border: 1px solid black; */
+}
+.Ingraph {
+    width: 100%; /* Full width of the parent container */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 300px; /* Optional: Limit max height */
+    /* Ensure that the chart adjusts itself if it's a canvas or SVG */
+    display: flex; /* Use flex if necessary for internal content alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Ensure responsive behavior within the main content */
+@media (max-width: 768px) {
+    .Ingraph {
+        max-height: 220px; /* Adjust max height for smaller screens if needed */
+    }
+}
+
+@media (max-width: 428px) {
+    .Ingraph {
+        max-height: 200px; /* Further adjust for mobile screens */
+    }
+}
+
+@media (max-width: 375px) {
+    .Ingraph {
+        max-height: 80px; /* Adjust height for very small screens */
+    }
+}
+
+@media (max-width: 325px) {
+    .Ingraph {
+        max-height: 150px; /* Further adjust height for the smallest screens */
+    }
+}
+.down{
+    width: 100%;
+    height: auto;
+    /* height: auto; */
+    /* background-color: #008cff; */
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+}
+.d1{
+    /* margin-top: 15px; */
+    /* margin-bottom: 10px; */
+    width: 300px;
+    /* border-radius: 10px; */
+    /* height: 100px; */
+    /* background-color:wheat; */
+    /* border: 1px solid black; */
+}
+.d2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height:285px;
+    /* background-color:wheat; */
+    border: 1px solid #a9a9a9;
+}
+@media (max-width:375px) {
+    .d2{
+        width: 100%;
+    }
+}
+.d3{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 400px;
+    height: 285px;
+    border:1px solid #a9a9a9;
+}
+
+.busno{
+    width: 100px;
+    height: 100px;
+    /* border:2px solid red; */
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.busNoNo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid red; */
+}
+.routeLine {
+    /* Use block to ensure elements stack vertically */
+    display: block;
+    position: relative; /* For positioning lines */
+}
+
+.routeDot {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    position: relative; /* For positioning lines relative to dots */
+    margin-bottom: 20px; /* Space between locations */
+}
+
+.dot {
+    width: 10px; /* Diameter of the dot */
+    height: 10px; /* Diameter of the dot */
+    border-radius: 50%; /* Make it circular */
+    background: #059BFF; /* Dot color */
+    margin-right: 10px; /* Space between dot and text */
+    /* border:2px solid black; */
+}
+
+.line {
+    position: absolute;
+    left: 3px; /* Align line with the center of the dot */
+    top: 17px; /* Position line below dot */
+    width: 3px; /* Line width */
+    height: 40px; /* Adjust height for spacing between dots */
+    background: #059BFF; /* Line color */
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+  }
+  
+  .calendar-section {
+    margin-bottom: 20px;
+  }
+  
+  .chart-section {
+    width: 100%;
+    max-width: 600px; /* Limit the max width for better appearance */
+  }
+ 
+  .chart-section p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    .chart-section {
+      width: 90%;
+    }
+    .chart-section p {
+        font-size: 1em;
+      }
+
+}
+   

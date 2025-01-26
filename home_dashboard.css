@@ -1,0 +1,116 @@
+/* Container for the whole layout */
+.container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f4ff;
+}
+
+.containerdiv1 {
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    /* border:2px solid red; */
+}
+
+/* Large card for the chart */
+.large-card {
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: 230px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border:2px solid red; */
+}
+
+/* Chart container inside large card */
+.chart-container {
+    width: 80%;
+    height: 95%;
+    margin-top: 20px;
+    margin-left: 60px;
+    /* border:2px solid black; */
+
+}
+
+/* Style for the heading */
+.heading {
+    font-size: 24px;
+    color: #0244c4;
+}
+
+/* Card styling for each service */
+.card {
+    width: 300px;
+    height: 230px;
+    background-color: #002244;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.downloadbutton {
+    width: 35%;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.pie {
+    width: 50%;
+    height: 0;
+    display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 800px) {
+    .chart-container {
+        display: none;
+    }
+
+    .large-card {
+        width: 250px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 250px;
+        padding: 10px;
+    }
+
+    .pie {
+        width: 80%;
+        height: 60%;
+        display: block;
+    }
+}
+@media screen and (max-width: 1880px) and (min-width: 1360px) {
+    .large-card{
+        width: 620px;
+    }
+    .containerdiv1{
+        width: 80%;
+        border:10px solid transparent;
+    }
+}

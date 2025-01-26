@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: white;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.logo img {
+    width: 160px;
+    transition: color 0.3s ease;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(38, 70, 129);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.search-profile {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+.profile_icon {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile_icon:hover {
+    transform: scale(1.2);
+}
+
+.search-icon {
+    display: none;
+}
+
+.search-icon1 {
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: black;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .search-profile {
+        display: none;  
+    }
+
+    .search-icon {
+        display: flex;  
+        padding-right: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 44px;
+        right: -50px;
+        background-color: white;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.5s ease;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.4s ease;
+    }
+
+    .nav.active .nav-links {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav.active .nav-links li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #1f2a48; */
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    perspective: 1000px; /* Perspective for the 3D effect */
+    background-color: #f5f5f5; /* Background for contrast */
+    overflow: hidden;
+    position: relative;
+    /* right: 200px; */
+    background-image: url('../../assets/project_iship/bus_image6.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+  }
+  
+  .hero-content {
+    /* right: 200px; */
+    /* background-color: #fff; Background for card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 75%;
+    width: 400px; /* Fixed width for consistent card size */
+   /* Shift the card slightly to the right */
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    
+  }
+  @media (max-width: 768px) {
+    .hero-content {
+        height: 80%;
+      justify-content: center;
+      right: 0px;/* Center the card on smaller screens */
+    }
+  }
+  
+  
+  .hero-content.flipped {
+    transform: rotateY(180deg); /* Flip animation when flipped */
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Padding for spacing */
+  }
+  
+  .card-front {
+    /* background-color: #1f2a48;  */
+    color: #fff; /* Front card text color */
+    /* border:2px solid red; */
+  }
+  
+  .card-back {
+    backface-visibility: hidden; 
+    /* background-color: #3B436F;  */
+    color: #fff; /* Back card text color */
+    transform: rotateY(180deg); /* Rotate the back side */
+  }
+  .card-front{
+    backface-visibility: hidden; 
+  }
+  
+  .card-back h1,
+  .card-front h1 {
+    font-size: 2rem; /* Consistent font size */
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .input-group {
+    width: 100%; /* Full width for inputs */
+    margin-bottom: 1.5rem;
+    /* border:2px solid red; */
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    /* border:2px solid rgb(194, 191, 195); */
+  }
+  
+  .input-group input {
+    width: 100%; /* Full width for inputs */
+    padding: 0.8rem;
+    /* padding-left: 6rem; */
+    padding-right: 6rem;
+    font-size: 1rem;
+    
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth border transition */
+  }
+  
+  .input-group input:focus {
+      /* border:2px solid red; */
+    border-color: #3B436F; /* Focus border color */
+  }
+  
+  .forgot-password {
+    margin: 1rem 0; /* Margin for spacing */
+  }
+  
+  .forgot-password a {
+    text-decoration: underline;
+    color: #ff4c4c; /* Forgot password link color */
+  }
+  .register-button{
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px;
+    width: 100px;
+    /* height: 10px; */
+    background-color: #3B436F;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    width: 90.5%; /* Full width for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  .login-button {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #3B436F;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Margin for spacing */
+  }
+  
+  @media (max-width:430px) {
+    .register-button{
+      width: 100%;
+    }
+   
+  }
+

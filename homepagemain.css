@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.homeparent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(5, 27, 68);
+}
+.homechild1 {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.homechild2 {
+    width: 50%;
+    background-image: url('../../assets/project_iship/background_color_img1.png');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    position: relative;
+}
+.homechild2 img{
+    max-width: 100%;
+    max-height: 70%;
+    height: auto;
+}
+@media (max-width: 800px) {
+    .homeparent {
+        flex-direction: column; 
+    }
+
+    .homechild1 {
+        width: 100%;
+        height: auto;
+        padding: 20px; 
+    }
+
+    .homechild2 {
+        width: 100%; 
+        height: auto;
+        padding: 20px; 
+    }
+    .homechild2 {
+        background-image: none;
+    }
+}
+@media (max-width: 530px) {
+    .homeparent{
+        width: 100%;
+    }
+    .homechild1,
+    .homechild2 {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .layer{
+        display: none;
+    }
+
+    .homechild1 img {
+        max-width: 80%; 
+        height: auto;
+    }
+
+    .homechild2 img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:385px) {
+    .homeparent{
+        width: 100%;
+    }
+}
+.layer{
+    margin-right: 25px;
+    margin-bottom: 30px;
+    animation: spin 5s linear infinite; 
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(36deg); }
+    20% { transform: rotate(72deg); }
+    30% { transform: rotate(108deg); }
+    40% { transform: rotate(144deg); }
+    50% { transform: rotate(180deg); }
+    60% { transform: rotate(216deg); }
+    70% { transform: rotate(252deg); }
+    80% { transform: rotate(288deg); }
+    90% { transform: rotate(324deg); }
+    100% { transform: rotate(360deg); }
+}
+.layer1{
+    position: absolute;
+    right: 0px;
+    top:100px;
+    width: 100px;
+}
+.layer2{
+    position: absolute;
+    right: 100px;
+    top:100px;
+    width: 100px;
+    animation: movement 12s infinite;
+}
+@media (max-width:720px) {
+    .layer2{
+        display: none;
+    }
+}
+@keyframes movement{
+    0%{right:200px;}
+    50%{right: 50px;}
+    100%{right:200px;}
+}
